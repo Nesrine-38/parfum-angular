@@ -1,0 +1,51 @@
+<ng-container *ngIf="product.length !=0">
+  <div class="container">
+      <div class="card-table">
+          <div class="cart-product">
+              <table class="table table-responsive">
+                  <thead>
+                      <tr>
+                          <th class="text">No</th>
+                          <th class="text">Product Name</th>
+                          <th class="text">Product Image</th>
+                          <th class="text">Price</th>
+                          <th class="text">Total</th>
+                          <th class="text">Action</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      <tr *ngFor="let item of product; let i = index">
+                          <td>{{i+1}}</td>
+                          <td class="name">{{item.product?.label}}</td>
+                          <td><img style="width: 120px;" src="{{item.product?.picture}}" alt=""></td>
+                          <th style="width: 12%;">{{item.product?.basePrice}}</th>
+                          <td style="width: 12%;"></td>
+                          <td> <button  class="supp" (click)="removeItemFromCart(product)">Delete</button></td>
+                      </tr>
+                      <tr>
+                          <td colspan="4"></td>
+                          <td><button (click)="emptycart()" class="empty btn">Empty Cart</button></td>
+                          <td><button routerLink="/" class="shop btn">Shop More</button></td>
+                      </tr>
+                  </tbody>
+              </table>
+          </div>
+      </div>
+  </div>
+</ng-container>
+
+
+
+<ng-container *ngIf="product.length == 0">
+  <div class="container">
+      <div class="card">
+          <h5 class="card-title">My Cart</h5>
+      </div>
+      <div class="center">
+          <img src="https://rukminim1.flixcart.com/www/800/800/promos/16/05/2019/d438a32e-765a-4d8b-b4a6-520b560971e8.png?q=90" alt="">
+          <h4>Your cart is empty!</h4>
+          <h6>Add item to it now</h6>
+          <button routerLink="" class="now btn ">Shop Now</button>
+      </div>
+  </div>
+</ng-container>

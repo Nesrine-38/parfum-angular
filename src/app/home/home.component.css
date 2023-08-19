@@ -1,0 +1,13 @@
+
+p{
+  display: flex;
+  justify-content: center;
+  font-weight: bold;
+  margin-top:.5rem;
+  color:#764929 ;
+}
+select{
+  width: 700px;
+  margin-left: 300px;
+  border:  1px solid #D3C37B;
+}

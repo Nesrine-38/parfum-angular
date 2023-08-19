@@ -1,0 +1,14 @@
+<div class="h-100 p-1 mb-5">
+  <div class=" line card shadow-lg p-3 mb-5 h-100 rounded">
+    <img src="{{product.picture}}" class="card-img-top" alt="...">
+    <div class="card-body ">
+      <h3 class="titre card-title text-center">{{product.label}}</h3>
+      <p class="description card-text">{{product.description}}</p>
+      <b>
+        <p class="price card-text text-end">Le prix initial: {{product.basePrice}}</p>
+      </b>
+      <button class="button"><a class="link" routerLink="/single-parfum/{{product.id}}">See more </a></button>
+    </div>
+  </div>
+</div>
+

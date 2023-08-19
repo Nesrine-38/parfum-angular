@@ -1,0 +1,23 @@
+.col-12{
+display: flex;
+justify-content: space-between;
+}
+img{
+  height: 00px;
+  width: 200px;
+}
+.text{
+  color: #764929;
+  font-weight: bold;
+}
+
+img{
+height:70px;
+width: 90px;
+}
+.titre1, .titre2{
+  color: #D3C37B;
+  font-family: 'Dancing Script', cursive;
+  font-size: 48px;
+  text-shadow: 4px 4px 4px #aaa;
+}

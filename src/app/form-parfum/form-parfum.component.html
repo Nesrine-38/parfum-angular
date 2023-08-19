@@ -1,0 +1,35 @@
+<div class="container">
+  <form (ngSubmit)="OnSubmit()">
+    <div class="mb-3 row">
+      <label for="label" class="col-sm-2 col-form-label">Label</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" name="label" [(ngModel)]="product.label">
+      </div>
+    </div>
+    <div class="mb-3 row">
+      <label for="basePrice" class="col-sm-2 col-form-label">basePrice</label>
+      <div class="col-sm-10">
+        <input type="number" class="form-control" name="basePrice" [(ngModel)]="product.basePrice">
+      </div>
+    </div>
+    <div class="mb-3 row">
+      <label for="description" class="col-sm-2 col-form-label">description</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" name="description" [(ngModel)]="product.description">
+      </div>
+    </div>
+    <div class="mb-3 row">
+      <label for="picture" class="col-sm-2 col-form-label">picture</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" name="picture" [(ngModel)]="product.picture">
+      </div>
+    </div>
+    <div class="mb-3 row">
+      <label for="idShop" class="col-sm-2 col-form-label">idShop</label>
+      <div class="col-sm-10">
+        <input type="number" class="form-control" name="idShop" [(ngModel)]="product.idShop">
+      </div>
+    </div>
+    <button class="btn btn-info m-auto">Add new perfume</button>
+  </form>
+</div>

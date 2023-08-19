@@ -1,0 +1,24 @@
+<nav class="navbar bg-light">
+  <div class="container-fluid ">
+    <a class="navbar-brand">Acceil</a>
+    <form class="d-flex ">
+      <input class="form-control me-2 search" type="search" placeholder="Search..." name="search" aria-label="Search"
+        [(ngModel)]="term" (keyup)="doSearch()">
+
+      <button class="btn btn-outline-success" type="submit">Search</button>
+    </form>
+  </div>
+  <ul class="nn offset-right">
+    <li *ngFor="let item of results">
+      <img src="{{item.picture}}">
+      <ul>
+        <li>
+          <p>{{item.label}}</p>
+        </li>
+        <li>
+          <p>il existe dans shop : <a routerLink="/shop/{{item.idShop}}">{{item.idShop}}</a> </p>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>

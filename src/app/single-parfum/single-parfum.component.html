@@ -1,0 +1,26 @@
+<div *ngIf="product">
+  <a routerLink="/cart">Go to cart</a>
+
+  <ng-container *ngIf="!editing">
+
+    <h1>{{product.label}}</h1>
+
+    <img src="{{product.picture}}">
+    <p>Description: {{product.description}}</p>
+    <app-options [options]="options"  />
+    <br>
+    <p><app-order-item [orderItem]="orderItem" [(ngModel)]="quantity"/></p>
+    <p>Total : {{total()}} €</p>
+    <button (click)="editing = true" class="btn btn-warning">Edit</button>
+    <button class="btn btn-success mx-3"  (click)="ajoutAuPanier(product)"><img src="https://cdn-icons-png.flaticon.com/512/118/118089.png" class="pan">Ajoutez Au Panier</button>
+
+  </ng-container >
+  <app-form-parfum *ngIf="editing" [product]="product" (added)="updateParfum($event)" />
+</div>
+<div *ngIf="!product">
+  Loading...
+</div>
+
+
+
+

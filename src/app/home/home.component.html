@@ -1,0 +1,14 @@
+<!--lier au selected avec un ngmodel
+event (change) qui va fetch les product du shop sélectionné-->
+<div class="container">
+  <p> Please choose your shop from our selection lists below</p>
+  <select [(ngModel)]="selected" (change)="choisir()">
+    <option disabled selected>shop's available</option>
+    <option *ngFor="let item of listshop" value="{{item.id}}">{{item.name}}</option>
+  </select>
+  <div *ngIf="list.length" class="row ">
+    <app-list-parfum class=" col-lg-3 col-md-4 col-sm-6" [product]="sh" *ngFor="let sh of list" />
+
+    <p>If you want to add a new perfume press !<a routerLink="/form-parfum"> Here</a></p>
+  </div>
+</div>

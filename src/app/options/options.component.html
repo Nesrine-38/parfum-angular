@@ -1,0 +1,6 @@
+<form (ngSubmit)="onSubmit()">
+  <div *ngFor="let item of options">
+    <input type="checkbox" name="options" id="options" />
+    <label for="options">{{ item.label }} + {{ item.price }} € </label>
+  </div>
+  </form>

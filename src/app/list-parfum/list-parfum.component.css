@@ -1,0 +1,30 @@
+.line{
+  width: 320px;
+}
+.titre{
+  color: #D3C37B;
+  text-transform: capitalize;
+}
+.description{
+  text-transform: capitalize;
+}
+.bb{
+  display: flex;
+  }
+  .price{
+    position: absolute;
+    bottom: 40px;
+    color: #D3C37B;
+  }
+  .link{
+    text-decoration:none ;
+    color: red;
+  }
+.button{
+    border: none;
+    background: none;
+    position: absolute;
+    bottom: 10px;
+    left: 70%;
+    transform: translateX(-20%);
+  }
