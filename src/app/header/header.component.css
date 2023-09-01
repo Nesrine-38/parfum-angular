@@ -7,7 +7,7 @@ img{
   width: 200px;
 }
 .text{
-  color: #764929;
+  color: 	#D3C37B;
   font-weight: bold;
 }
 
@@ -16,8 +16,9 @@ height:70px;
 width: 90px;
 }
 .titre1, .titre2{
-  color: #D3C37B;
+  color: #5E17EB;
   font-family: 'Dancing Script', cursive;
+  font-weight:bold;
   font-size: 48px;
   text-shadow: 4px 4px 4px #aaa;
 }

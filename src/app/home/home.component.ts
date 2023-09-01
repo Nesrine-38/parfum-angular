@@ -12,6 +12,8 @@ export class HomeComponent implements OnInit {
   list: Product[] = [];
   listshop: Shop[] = [];
   selected: Shop;
+ 
+
   constructor(private service: ParfumService) { }
 
   ngOnInit(): void {
@@ -28,4 +30,7 @@ export class HomeComponent implements OnInit {
       .subscribe(data => this.list = data);
 
   }
+
+
+
 }

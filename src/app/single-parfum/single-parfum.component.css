@@ -1,9 +1,28 @@
 img {
   width: 300px;
-  border: 2px solid black;
 }
 
 img.pan {
   width: 20px;
   height: 20px;
+}
+.boutons{
+  margin-left:84%;
+}
+.card-title{
+  color:#5E17EB;
+  text-transform: uppercase;
+
+}
+.card-text{
+  text-transform:capitalize;
+}
+.total{
+  color: red;
+  margin-left:85%;
+}
+.material-symbols-outlined{
+  font-size:30px !important;
+  color:#D3C37B ;
+
 }

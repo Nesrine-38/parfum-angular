@@ -1,35 +1,37 @@
 <div class="container">
   <form (ngSubmit)="OnSubmit()">
     <div class="mb-3 row">
-      <label for="label" class="col-sm-2 col-form-label">Label</label>
+      <label for="label" class="col-sm-2 col-form-label fw-bold" style="color: #5E17EB;">Nom</label>
       <div class="col-sm-10">
-        <input type="text" class="form-control" name="label" [(ngModel)]="product.label">
+        <input type="text" class="form-control" required autofocus name="label" [(ngModel)]="product.label"  style=" border-color: #d7b94b;">
       </div>
     </div>
     <div class="mb-3 row">
-      <label for="basePrice" class="col-sm-2 col-form-label">basePrice</label>
-      <div class="col-sm-10">
-        <input type="number" class="form-control" name="basePrice" [(ngModel)]="product.basePrice">
+      <label for="basePrice" class="col-sm-2 col-form-label fw-bold" style="color: #5E17EB;">BasePrice</label>
+      <div class="col-sm-10" >
+        <input type="number" class="form-control" name="basePrice" [(ngModel)]="product.basePrice" style=" border-color: #d7b94b;" required>
       </div>
     </div>
     <div class="mb-3 row">
-      <label for="description" class="col-sm-2 col-form-label">description</label>
+      <label for="description" class="col-sm-2 col-form-label fw-bold" style="color: #5E17EB;">Description</label>
       <div class="col-sm-10">
-        <input type="text" class="form-control" name="description" [(ngModel)]="product.description">
+        <input type="text" class="form-control" name="description" [(ngModel)]="product.description"  style=" border-color: #d7b94b;" required>
       </div>
     </div>
     <div class="mb-3 row">
-      <label for="picture" class="col-sm-2 col-form-label">picture</label>
-      <div class="col-sm-10">
-        <input type="text" class="form-control" name="picture" [(ngModel)]="product.picture">
+      <label for="picture" class="col-sm-2 col-form-label fw-bold" style="color: #5E17EB;">Picture</label>
+      <div class="col-sm-10" >
+        <input type="text" class="form-control" name="picture" [(ngModel)]="product.picture" style=" border-color: #d7b94b;" required>
       </div>
     </div>
     <div class="mb-3 row">
-      <label for="idShop" class="col-sm-2 col-form-label">idShop</label>
-      <div class="col-sm-10">
-        <input type="number" class="form-control" name="idShop" [(ngModel)]="product.idShop">
+      <label for="idShop" class="col-sm-2 col-form-label fw-bold" style="color: #5E17EB;">idShop</label>
+      <div class="col-sm-10" >
+        <input type="number" class="form-control" name="idShop" [(ngModel)]="product.idShop" style=" border-color: #d7b94b;" required>
       </div>
     </div>
-    <button class="btn btn-info m-auto">Add new perfume</button>
+    <button class="btn m-auto shadow p-3 mb-5 bg-body-tertiary rounded d-grid gap-2 col-6 mx-auto" style="border-color: #d7b94b; width:250px"><span class="material-symbols-outlined">
+      add
+      </span></button>
   </form>
 </div>

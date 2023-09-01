@@ -1,5 +1,5 @@
-<label for="quantity"> Quantité</label>
-<input [(ngModel)]="orderItem.quantity" type="range" min="1" max="10" value="0" step="1" list="number" name="quantity" id="quantity">
+<label for="quantity" class="quantity mx-3 fw-bold"> veuillez choisir la quantité désirée :</label>
+<input class="quantity fw-bold" [(ngModel)]="orderItem.quantity" type="range" min="0" max="100" value="0" step="0" list="number" name="quantity" id="quantity">
 <output>{{orderItem.quantity}}</output>
 <datalist id="number">
     <option value="1"></option>

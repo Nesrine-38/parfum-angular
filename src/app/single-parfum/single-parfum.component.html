@@ -1,25 +1,43 @@
 <div *ngIf="product">
-  <a routerLink="/cart">Go to cart</a>
-
-  <ng-container *ngIf="!editing">
-
-    <h1>{{product.label}}</h1>
-
-    <img src="{{product.picture}}">
-    <p>Description: {{product.description}}</p>
-    <app-options [options]="options"  />
-    <br>
-    <p><app-order-item [orderItem]="orderItem" [(ngModel)]="quantity"/></p>
-    <p>Total : {{total()}} €</p>
-    <button (click)="editing = true" class="btn btn-warning">Edit</button>
-    <button class="btn btn-success mx-3"  (click)="ajoutAuPanier(product)"><img src="https://cdn-icons-png.flaticon.com/512/118/118089.png" class="pan">Ajoutez Au Panier</button>
-
-  </ng-container >
-  <app-form-parfum *ngIf="editing" [product]="product" (added)="updateParfum($event)" />
+  <a routerLink="/cart"><span class="material-symbols-outlined">
+    arrow_back
+    </span></a>
+<div class="card mb-5 " style="max-width: AUTO; border-color:#D3C37B;">
+  <div class="row g-0">
+    <div class="col-md-4">
+      <img src="{{product.picture}}" class="img-fluid rounded border-0" alt="...">
+    </div>
+    <div class="col-md-8" *ngIf="!editing">
+      <div class="card-body">
+        <h4 class="card-title text-center"  >{{product.label}}</h4>
+        <p class="card-text" > {{product.description}}</p>
+        <app-options [options]="options"/>
+        <br>
+        <p><app-order-item [orderItem]="orderItem" [(ngModel)]="quantity"/></p>
+        <p class="total fw-bold">Total : <SPAN>{{total()}} </SPAN> €</p>
+        <DIV class="boutons">
+           <button (click)="editing = true" class="btn m-auto shadow bg-body-tertiary rounded "><span class="material-symbols-outlined">
+          box_edit
+          </span></button>
+          <button class="btn mx-2 m-auto shadow bg-body-tertiary rounded"  (click)="ajoutAuPanier(product)"><span class="material-symbols-outlined">
+            shopping_cart
+            </span></button></DIV>
+      </div>
+    </div>
+    <app-form-parfum *ngIf="editing" [product]="product" (added)="updateParfum($event)" />
+  </div>
 </div>
+</div>
+
+
 <div *ngIf="!product">
   Loading...
 </div>
+
+
+
+
+
 
 
 
